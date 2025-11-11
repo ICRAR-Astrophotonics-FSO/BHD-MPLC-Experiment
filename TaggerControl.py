@@ -8,12 +8,12 @@ class TaggerControl:
             self.cr = TimeTagger.Countrate(self.tagger, channels=[1, 2, 3, 4])
 
 
-    def get_counts(self, time_ps = 0.25e12, samples = 10):
+    def get_counts(self, integration_time_ps = 0.25e12, samples = 10):
         """returns a list of length samples, each entry is a list of counts with one entry for each channel"""
         data = []
         for i in range(samples):
             self.cr.clear()
-            self.cr.startFor(time_ps)
+            self.cr.startFor(integration_time_ps)
             self.cr.waitUntilFinished()
             data.append(self.cr.getData())
             print(data[-1]) 
