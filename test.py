@@ -1,7 +1,8 @@
 import MokuControl
 
-# freq= 1e3
-# test_moku = MokuControl.Moku(ip_address='10.42.0.52', aom_frequencies=[freq, freq])
+freq= 1e3
+test_moku = MokuControl.Moku(ip_address='10.42.0.52', aom_frequencies=[freq, freq])
+exit()
 # test_moku.generate_sinewave(channel=1, power=0)
 # test_moku.generate_sinewave(channel=2, power=-10)
 # # cal_power_dBm = -30.0
